@@ -268,7 +268,9 @@
      * @title $.mvc.controller.route
      */
     $.mvc.route = function(url, evt) {
-        var route, axt;
+var route, axt;
+if (!(typeof(url) ==='string'))
+url = url.href;
 
         if (url.indexOf(baseUrl) === 0)
             url = url.substring(baseUrl.length, url.length);
